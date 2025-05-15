@@ -1,0 +1,20 @@
+{
+  "name": "Clent Ebanks - Tarjeta Digital",
+  "short_name": "Clent Ebanks",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#e9f1f7",
+  "theme_color": "#7c3aed",
+  "icons": [
+    {
+      "src": "favicon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "favicon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
