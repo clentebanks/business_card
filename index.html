@@ -3,27 +3,29 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Clent Ebanks - Tarjeta de Presentación</title>
+  <title>Clent Ebanks - Tarjeta Digital</title>
+  <link rel="icon" href="favicon.png" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
   <style>
     body {
-      background: #f1f4f9;
+      background: #e9f1f7;
       font-family: 'Segoe UI', sans-serif;
     }
 
     .card-business {
-      max-width: 420px;
+      max-width: 400px;
       margin: 60px auto;
-      background: #fff;
-      border-radius: 16px;
+      background: #ffffff;
+      border-radius: 20px;
       overflow: hidden;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
       position: relative;
+      transition: 0.3s ease-in-out;
     }
 
     .card-header {
-      height: 200px;
+      height: 180px;
       background-size: cover;
       background-position: center;
       position: relative;
@@ -31,110 +33,116 @@
 
     .badge-brand {
       position: absolute;
-      bottom: 16px;
+      bottom: 14px;
       right: 16px;
-      background-color: #e0574f;
+      background-color: #7c3aed;
       color: #fff;
-      padding: 6px 14px;
+      padding: 6px 12px;
       border-radius: 8px;
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       display: flex;
       align-items: center;
-      gap: 5px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      gap: 6px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
     .profile-img {
-      width: 96px;
-      height: 96px;
+      width: 90px;
+      height: 90px;
       border-radius: 50%;
       object-fit: cover;
       border: 4px solid #fff;
       position: absolute;
-      top: 140px;
+      top: 130px;
       left: 20px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
       z-index: 10;
     }
 
     .card-body {
-      padding: 80px 20px 30px;
-    }
-
-    .name-title {
-      margin-left: 0px;
+      padding: 70px 20px 30px;
     }
 
     .name-title h4 {
-      margin-bottom: 4px;
       font-weight: 700;
+      margin-bottom: 4px;
     }
 
     .name-title p {
-      margin-bottom: 2px;
-      font-size: 1.5rem;
-      font-weight: bold;
+      font-size: 1rem;
+      margin-bottom: 3px;
+      color: #555;
     }
 
     .contact-info {
-      margin-top: 20px;
+      margin-top: 18px;
     }
 
     .contact-item {
       display: flex;
       align-items: center;
-      margin-bottom: 16px;
+      margin-bottom: 14px;
     }
 
     .contact-icon {
-      background: #f2f2f2;
+      background: #edf2f7;
       width: 44px;
       height: 44px;
-      border-radius: 50%;
+      border-radius: 12px;
       display: flex;
       justify-content: center;
       align-items: center;
-      margin-right: 15px;
       font-size: 1.2rem;
-      color: #e0574f;
+      color: #7c3aed;
+      margin-right: 12px;
     }
 
     .contact-text strong {
       display: block;
-      font-weight: 500;
+      font-weight: 600;
       color: #222;
     }
 
     .contact-text small {
-      font-size: 0.85rem;
-      color: #777;
+      font-size: 0.8rem;
+      color: #666;
     }
 
     .buttons {
-      margin-top: 20px;
+      margin-top: 24px;
       text-align: center;
+    }
+
+    .buttons a {
+      margin: 6px 4px;
+      border-radius: 12px;
+      transition: all 0.3s ease;
+    }
+
+    .buttons a:hover {
+      transform: translateY(-2px);
     }
 
     .qr-code img {
       margin-top: 10px;
       border-radius: 8px;
+      border: 1px solid #ddd;
     }
 
     @media (max-width: 480px) {
       .card-business {
-        margin: 30px 10px;
+        margin: 30px 15px;
       }
 
       .profile-img {
-        top: 130px;
         left: 50%;
         transform: translateX(-50%);
+        top: 120px;
       }
 
       .name-title {
-        margin-left: 0;
-        margin-top: 60px;
         text-align: center;
+        margin-top: 50px;
       }
     }
   </style>
@@ -142,17 +150,17 @@
 <body>
 
   <div class="card-business">
-    <div class="card-header" style="background-image: url('/Imagen2.jpg')">
+    <div class="card-header" style="background-image: url('Imagen2.jpg')">
       <div class="badge-brand">
-        <i class="bi bi-house-door-fill"></i> PIMATECNO
+        <i class="bi bi-stars"></i> PIMATECNO
       </div>
     </div>
     <img src="hero.png" alt="Clent Ebanks" class="profile-img" />
     <div class="card-body">
       <div class="name-title">
         <h4>Clent Ebanks</h4>
-        <p class="text-muted">Intérprete / Desarrollador Web</p>
-        <p class="text-muted">PIMATECNO</p>
+        <p>Intérprete / Desarrollador Web</p>
+        <p>PIMATECNO</p>
       </div>
 
       <div class="contact-info">
@@ -173,30 +181,26 @@
         <div class="contact-item">
           <div class="contact-icon"><i class="bi bi-globe"></i></div>
           <div class="contact-text">
-            <strong><a href="https://clent-portafolio.netlify.app/" target="_blank">clent-portafolio.netlify.app</a></strong>
-            <small>Portafolio</small>
+            <strong><a href="https://clent-portafolio.netlify.app/" target="_blank">Ver Portafolio</a></strong>
+            <small>Web Personal</small>
           </div>
         </div>
       </div>
 
       <div class="buttons">
-        <!-- Código QR del archivo vCard -->
         <div class="qr-code">
-          <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://clentbusinesscard.netlify.app/Clent_Ebanks.vcf" alt="QR a vCard" />
+          <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://clentbusinesscard.netlify.app/Clent_Ebanks.vcf" alt="QR" />
           <small class="d-block mt-2 text-muted">Escanea para guardar contacto</small>
         </div>
 
-        <!-- Botón de WhatsApp -->
-        <a href="https://wa.link/x9u1bg" class="btn btn-success btn-sm mt-3" target="_blank">
-          <i class="bi bi-whatsapp"></i> Contactar por WhatsApp
+        <a href="https://wa.link/x9u1bg" class="btn btn-success btn-sm">
+          <i class="bi bi-whatsapp"></i> WhatsApp
         </a>
 
-        <!-- Botón de descarga vCard -->
-        <a href="Clent_Ebanks.vcf" download class="btn btn-primary btn-sm mt-3">
+        <a href="Clent_Ebanks.vcf" download class="btn btn-primary btn-sm">
           <i class="bi bi-download"></i> Descargar vCard
         </a>
       </div>
-
     </div>
   </div>
 
