@@ -1,27 +1,39 @@
-const CACHE_NAME = "clent-ebanks-cache-v1";
-const urlsToCache = [
-  "/",
-  "/index.html",
-  "/favicon.png",
-  "/Imagen2.jpg",
-  "/hero.png",
-  "/Clent_Ebanks.vcf",
-  "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css",
-  "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+const CACHE_NAME = 'winhacks-card-v2';
+const CORE_ASSETS = [
+  './',
+  './index.html',
+  './style.css',
+  './script.js',
+  './hero.png',
+  './qr-contacto.png',
+  './Clent_Ebanks.vcf',
+  './manifest.json',
+  './icons/favicon_ce.png',
+  './icons/icon-192.png',
+  './icons/icon-512.png'
 ];
 
-self.addEventListener("install", event => {
-  event.waitUntil(
-    caches.open(CACHE_NAME).then(cache => {
-      return cache.addAll(urlsToCache);
-    })
-  );
+self.addEventListener('install', event => {
+  event.waitUntil(caches.open(CACHE_NAME).then(cache => cache.addAll(CORE_ASSETS)));
+  self.skipWaiting();
 });
 
-self.addEventListener("fetch", event => {
+self.addEventListener('activate', event => {
+  event.waitUntil(
+    caches.keys().then(keys => Promise.all(
+      keys.filter(key => key !== CACHE_NAME).map(key => caches.delete(key))
+    ))
+  );
+  self.clients.claim();
+});
+
+self.addEventListener('fetch', event => {
+  if (event.request.method !== 'GET') return;
   event.respondWith(
-    caches.match(event.request).then(response => {
-      return response || fetch(event.request);
-    })
+    caches.match(event.request).then(cached => cached || fetch(event.request).then(response => {
+      const copy = response.clone();
+      caches.open(CACHE_NAME).then(cache => cache.put(event.request, copy));
+      return response;
+    }).catch(() => caches.match('./index.html')))
   );
 });

@@ -1,37 +1,12 @@
-// Reemplaza con tu CSV exportado automáticamente desde el script
-const csvUrl = "https://docs.google.com/spreadsheets/d/XXXXXXXXXXXXXX/export?format=csv";
+document.addEventListener('DOMContentLoaded', () => {
+  const year = document.getElementById('current-year');
+  if (year) year.textContent = new Date().getFullYear();
 
-fetch(csvUrl)
-  .then(res => res.text())
-  .then(data => {
-    const rows = data.trim().split("\n").map(row => row.split(","));
-    const content = {};
-    for (let i = 1; i < rows.length; i++) {
-      content[rows[i][0].trim()] = rows[i][1].trim();
-    }
-
-    // Datos
-    document.getElementById("nombre").textContent = content["nombre"];
-    document.getElementById("profesion").textContent = content["profesion"];
-    document.getElementById("empresa").textContent = content["empresa"];
-    document.getElementById("correo").href = `mailto:${content["correo"]}`;
-    document.getElementById("telefono").href = `tel:${content["telefono"]}`;
-    document.getElementById("whatsapp").href = content["whatsapp"];
-    document.getElementById("portafolio").href = content["portafolio"];
-    document.getElementById("vcard").href = content["vcard"];
-    document.getElementById("qr").src = content["qr"];
-    document.getElementById("profile-img").src = content["foto"];
-    document.getElementById("header-img").src = content["header"];
-    document.getElementById("logo").textContent = content["logo"];
-
-    // Colores
-    document.body.style.backgroundColor = content["color_fondo"];
-    document.body.style.color = content["color_texto"];
-    document.querySelectorAll(".contact-icon").forEach(el => {
-      el.style.color = content["color_icono"];
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('./service-worker.js').catch(() => {
+        // La tarjeta continúa funcionando aunque el navegador no permita PWA.
+      });
     });
-    document.querySelector(".badge-brand").style.backgroundColor = content["color_principal"];
-    document.querySelectorAll(".boton").forEach(btn => {
-      btn.style.backgroundColor = content["color_principal"];
-    });
-  });
+  }
+});

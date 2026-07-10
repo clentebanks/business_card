@@ -1,20 +1,22 @@
 {
-  "name": "Clent Ebanks - Tarjeta Digital",
-  "short_name": "Clent Ebanks",
-  "start_url": ".",
+  "name": "Clent Ebanks | WinHacks",
+  "short_name": "WinHacks",
+  "description": "Tarjeta digital de Clent Ebanks, creador de WinHacks.",
+  "start_url": "./",
+  "scope": "./",
   "display": "standalone",
-  "background_color": "#e9f1f7",
-  "theme_color": "#7c3aed",
+  "background_color": "#030914",
+  "theme_color": "#07111f",
   "icons": [
-  {
-    "src": "icons/icon-192.png",
-    "sizes": "192x192",
-    "type": "image/png"
-  },
-  {
-    "src": "icons/icon-512.png",
-    "sizes": "512x512",
-    "type": "image/png"
-  }
-]
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
 }

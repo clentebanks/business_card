@@ -2,9 +2,10 @@ BEGIN:VCARD
 VERSION:3.0
 N:Ebanks;Clent;;;
 FN:Clent Ebanks
-ORG:PIMATECNO
-TITLE:Intérprete y Desarrollador Web
-TEL;TYPE=cell:+50498520210
-EMAIL:clentebanks0@gmail.com
-URL:https://clent-portafolio.netlify.app/
+ORG:WinHacks
+TITLE:Creador de contenido, Intérprete y Desarrollador Web
+TEL;TYPE=CELL:+50498520210
+EMAIL;TYPE=INTERNET:clentebanks0@gmail.com
+URL:https://winhacks.dev/
+NOTE:Windows explicado de forma simple. WinHacks ayuda a usuarios, técnicos y creadores a descubrir funciones, comandos y configuraciones de Windows.
 END:VCARD

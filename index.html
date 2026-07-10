@@ -3,186 +3,113 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Clent Ebanks - Professional Digital Card</title>
-  <link rel="icon" href="favicon.png">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-    
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: #f8fafc;
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 20px;
-    }
-    
-    .card-hover-effect {
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-    
-    .card-hover-effect:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-    }
-    
-    .gradient-header {
-      background: linear-gradient(135deg, #7c3aed 0%, #4f46e5 100%);
-    }
-    
-    .profile-border {
-      border: 4px solid white;
-      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-    }
-    
-    .contact-icon {
-      transition: all 0.2s ease;
-    }
-    
-    .contact-icon:hover {
-      transform: scale(1.05);
-      background-color: #f1f5f9;
-    }
-    
-    .qr-code {
-      filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
-    }
-    
-    .badge-pulse {
-      animation: pulse 2s infinite;
-    }
-    
-    @keyframes pulse {
-      0% {
-        box-shadow: 0 0 0 0 rgba(124, 58, 237, 0.7);
-      }
-      70% {
-        box-shadow: 0 0 0 10px rgba(124, 58, 237, 0);
-      }
-      100% {
-        box-shadow: 0 0 0 0 rgba(124, 58, 237, 0);
-      }
-    }
-  </style>
+  <meta name="theme-color" content="#07111f">
+  <meta name="description" content="Tarjeta digital de Clent Ebanks, creador de WinHacks: Windows explicado de forma simple.">
+  <title>Clent Ebanks | WinHacks</title>
+  <link rel="icon" type="image/png" href="icons/favicon_ce.png">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="max-w-md w-full mx-auto">
-    <div class="bg-white rounded-2xl overflow-hidden shadow-xl card-hover-effect">
-      <!-- Header with gradient background -->
-      <div class="gradient-header h-40 relative">
-        <!-- Company badge with pulse effect -->
-        <div class="absolute bottom-4 right-4 bg-white text-purple-700 px-3 py-1 rounded-full text-xs font-semibold flex items-center gap-1 shadow-sm badge-pulse">
-          <i class="bi bi-stars text-purple-600"></i> PIMATECNO
-        </div>
-      </div>
-      
-      <!-- Profile section -->
-      <div class="px-6 pb-6 relative">
-        <!-- Profile image centered above the card -->
-        <div class="absolute -top-16 left-1/2 transform -translate-x-1/2">
-          <img src="hero.png" alt="Clent Ebanks" class="w-32 h-32 rounded-full object-cover profile-border">
-        </div>
-        
-        <!-- Name and title -->
-        <div class="pt-20 text-center">
-          <h1 class="text-2xl font-bold text-gray-800">Clent Ebanks</h1>
-          <p class="text-purple-600 font-medium">Interpreter / Web Developer</p>
-          <p class="text-gray-500 text-sm mt-1">PIMATECNO</p>
-        </div>
-        
-        <!-- Contact information -->
-        <div class="mt-8 space-y-4">
-          <!-- Email -->
-          <div class="flex items-center p-3 rounded-xl hover:bg-gray-50 transition-colors contact-item">
-            <div class="contact-icon bg-gray-100 w-12 h-12 rounded-lg flex items-center justify-center text-purple-600 mr-3">
-              <i class="bi bi-envelope-fill text-xl"></i>
-            </div>
-            <div>
-              <p class="font-semibold text-gray-800">clentebanks0@gmail.com</p>
-              <p class="text-xs text-gray-500">Email</p>
-            </div>
-          </div>
-          
-          <!-- Phone -->
-          <div class="flex items-center p-3 rounded-xl hover:bg-gray-50 transition-colors contact-item">
-            <div class="contact-icon bg-gray-100 w-12 h-12 rounded-lg flex items-center justify-center text-purple-600 mr-3">
-              <i class="bi bi-telephone-fill text-xl"></i>
-            </div>
-            <div>
-              <p class="font-semibold text-gray-800">(504) 9852-0210</p>
-              <p class="text-xs text-gray-500">Mobile</p>
-            </div>
-          </div>
-          
-          <!-- Website -->
-          <div class="flex items-center p-3 rounded-xl hover:bg-gray-50 transition-colors contact-item">
-            <div class="contact-icon bg-gray-100 w-12 h-12 rounded-lg flex items-center justify-center text-purple-600 mr-3">
-              <i class="bi bi-globe text-xl"></i>
-            </div>
-            <div>
-              <a href="https://clent-portafolio.netlify.app/" target="_blank" class="font-semibold text-gray-800 hover:text-purple-600 transition-colors">
-                View Portfolio
-              </a>
-              <p class="text-xs text-gray-500">Personal Website</p>
-            </div>
-          </div>
-        </div>
-        
-        <!-- QR Code -->
-        <div class="mt-8 text-center">
-          <div class="inline-block p-2 bg-white rounded-lg shadow-sm qr-code">
-            <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://clentbusinesscard.netlify.app/Clent_Ebanks.vcf" alt="QR Code" class="w-32 h-32 rounded">
-          </div>
-          <p class="text-xs text-gray-500 mt-2">Scan to save contact</p>
-        </div>
-        
-        <!-- Action buttons -->
-        <div class="mt-8 flex flex-col sm:flex-row justify-center gap-3">
-          <a href="https://wa.link/x9u1bg" class="flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg font-medium transition-colors shadow-sm">
-            <i class="bi bi-whatsapp"></i> WhatsApp
-          </a>
-          <a href="Clent_Ebanks.vcf" download class="flex items-center justify-center gap-2 bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-lg font-medium transition-colors shadow-sm">
-            <i class="bi bi-download"></i> Download vCard
-          </a>
-        </div>
-      </div>
-    </div>
-    
-    <!-- Footer with subtle branding -->
-    <div class="mt-6 text-center">
-      <p class="text-xs text-gray-400">Digital Business Card • © 2023 Clent Ebanks</p>
-    </div>
-  </div>
+  <main class="page-shell">
+    <article class="digital-card" aria-labelledby="card-title">
+      <header class="brand-header">
+        <div class="brand-grid" aria-hidden="true"></div>
+        <div class="brand-glow brand-glow-one" aria-hidden="true"></div>
+        <div class="brand-glow brand-glow-two" aria-hidden="true"></div>
 
-  <script>
-    // Add interactive effects
-    document.addEventListener('DOMContentLoaded', function() {
-      const card = document.querySelector('.card-hover-effect');
-      
-      // Add tilt effect on mouse move
-      card.addEventListener('mousemove', (e) => {
-        const xAxis = (window.innerWidth / 2 - e.pageX) / 25;
-        const yAxis = (window.innerHeight / 2 - e.pageY) / 25;
-        card.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
-      });
-      
-      // Reset when mouse leaves
-      card.addEventListener('mouseleave', () => {
-        card.style.transform = 'rotateY(0deg) rotateX(0deg)';
-      });
-      
-      // Service worker registration
-      if ('serviceWorker' in navigator) {
-        window.addEventListener('load', () => {
-          navigator.serviceWorker.register('/service-worker.js')
-            .then(reg => console.log('Service Worker registered:', reg))
-            .catch(err => console.log('Service Worker error:', err));
-        });
-      }
-    });
-  </script>
+        <a class="brand" href="https://winhacks.dev/" target="_blank" rel="noopener noreferrer" aria-label="Visitar WinHacks">
+          <span class="brand-mark" aria-hidden="true">W</span>
+          <span class="brand-copy">
+            <strong>Win<span>Hacks</span></strong>
+            <small>Windows explicado simple</small>
+          </span>
+        </a>
+
+        <span class="brand-badge">CREADOR</span>
+      </header>
+
+      <section class="profile-section">
+        <div class="profile-image-wrap">
+          <img src="hero.png" width="200" height="200" alt="Retrato de Clent Ebanks, creador de WinHacks" class="profile-image">
+          <span class="status-dot" title="Disponible"></span>
+        </div>
+
+        <div class="identity">
+          <p class="eyebrow">CREADOR DE WINHACKS</p>
+          <h1 id="card-title">Clent Ebanks</h1>
+          <p class="role">Creador de contenido · Intérprete · Desarrollador web</p>
+        </div>
+
+        <div class="mission-card">
+          <span class="mission-icon" aria-hidden="true">⌘</span>
+          <div>
+            <h2>Windows explicado de forma simple.</h2>
+            <p>WinHacks ayuda a usuarios, técnicos y creadores a descubrir funciones, comandos y configuraciones de Windows que normalmente pasan desapercibidas.</p>
+          </div>
+        </div>
+
+        <nav class="contact-list" aria-label="Datos de contacto">
+          <a class="contact-row" href="mailto:clentebanks0@gmail.com">
+            <span class="contact-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M3 5h18v14H3V5Zm2 2v.4l7 4.7 7-4.7V7H5Zm14 10V9.8l-7 4.7-7-4.7V17h14Z"/></svg>
+            </span>
+            <span class="contact-copy">
+              <strong>clentebanks0@gmail.com</strong>
+              <small>Correo electrónico</small>
+            </span>
+            <span class="row-arrow" aria-hidden="true">→</span>
+          </a>
+
+          <a class="contact-row" href="tel:+50498520210">
+            <span class="contact-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M6.6 2h3l1.2 5-2 1.3a15.4 15.4 0 0 0 6.9 6.9l1.3-2 5 1.2v3c0 1.4-1.1 2.6-2.5 2.6C10 20 4 14 4 6.5 4 5.1 5.2 4 6.6 4V2Z"/></svg>
+            </span>
+            <span class="contact-copy">
+              <strong>+504 9852-0210</strong>
+              <small>Teléfono móvil</small>
+            </span>
+            <span class="row-arrow" aria-hidden="true">→</span>
+          </a>
+
+          <a class="contact-row" href="https://winhacks.dev/" target="_blank" rel="noopener noreferrer">
+            <span class="contact-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm6.9 6h-3.1a15.8 15.8 0 0 0-1.5-3.4A8.1 8.1 0 0 1 18.9 8ZM12 4c.9 1.1 1.6 2.4 2 4h-4c.4-1.6 1.1-2.9 2-4ZM4.3 14a8.2 8.2 0 0 1 0-4h3.4a16.8 16.8 0 0 0 0 4H4.3Zm.8 2h3.1a15.8 15.8 0 0 0 1.5 3.4A8.1 8.1 0 0 1 5.1 16ZM8.2 8H5.1a8.1 8.1 0 0 1 4.6-3.4A15.8 15.8 0 0 0 8.2 8ZM12 20c-.9-1.1-1.6-2.4-2-4h4c-.4 1.6-1.1 2.9-2 4Zm2.4-6H9.6a14.8 14.8 0 0 1 0-4h4.8a14.8 14.8 0 0 1 0 4Zm-.1 5.4a15.8 15.8 0 0 0 1.5-3.4h3.1a8.1 8.1 0 0 1-4.6 3.4Zm1.9-5.4a16.8 16.8 0 0 0 0-4h3.4a8.2 8.2 0 0 1 0 4h-3.4Z"/></svg>
+            </span>
+            <span class="contact-copy">
+              <strong>winhacks.dev</strong>
+              <small>Trucos, comandos y guías de Windows</small>
+            </span>
+            <span class="row-arrow" aria-hidden="true">↗</span>
+          </a>
+        </nav>
+
+        <section class="qr-section" aria-label="Código QR de contacto">
+          <div class="qr-frame">
+            <img src="qr-contacto.png" width="220" height="220" alt="Código QR para guardar el contacto de Clent Ebanks">
+          </div>
+          <div class="qr-copy">
+            <strong>Guarda mi contacto</strong>
+            <span>Escanea el código desde tu teléfono.</span>
+          </div>
+        </section>
+
+        <div class="actions">
+          <a href="https://wa.link/x9u1bg" target="_blank" rel="noopener noreferrer" class="button button-secondary">
+            <span aria-hidden="true">◉</span> WhatsApp
+          </a>
+          <a href="Clent_Ebanks.vcf" download class="button button-primary">
+            <span aria-hidden="true">↓</span> Guardar contacto
+          </a>
+        </div>
+      </section>
+    </article>
+
+    <footer class="page-footer">
+      <span>WinHacks</span> · Tecnología útil, explicada sin complicaciones · © <span id="current-year">2026</span>
+    </footer>
+  </main>
+
+  <script src="script.js" defer></script>
 </body>
 </html>
