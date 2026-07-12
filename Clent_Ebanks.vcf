@@ -2,11 +2,10 @@ BEGIN:VCARD
 VERSION:3.0
 N:Ebanks;Clent;;;
 FN:Clent Ebanks
-ORG:Clent Ebanks | WinHacks
-TITLE:Intérprete bilingüe, fundador de WinHacks y desarrollador web en formación
-TEL;TYPE=CELL:+50498520210
-EMAIL;TYPE=INTERNET:clentebanks0@gmail.com
-URL:https://winhacks.dev/
-URL;TYPE=LinkedIn:https://www.linkedin.com/in/clent-ebanks
-NOTE:Tecnología clara para personas reales. De militar a crear y enseñar tecnología. Fundador de WinHacks.
+ORG:Profesional independiente
+TITLE:Interprete bilingue
+TEL;TYPE=CELL,VOICE:+50498520210
+EMAIL;TYPE=INTERNET,PREF:clentebanks0@gmail.com
+URL:https://clentbusinesscard.netlify.app/
+X-SOCIALPROFILE;TYPE=linkedin:https://www.linkedin.com/in/clent-ebanks
 END:VCARD
