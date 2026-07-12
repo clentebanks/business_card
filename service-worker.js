@@ -1,4 +1,4 @@
-const CACHE_NAME = 'winhacks-card-v2';
+const CACHE_NAME = 'clent-ebanks-card-v4';
 const CORE_ASSETS = [
   './',
   './index.html',

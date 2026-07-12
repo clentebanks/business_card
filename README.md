@@ -1,9 +1,14 @@
-# Digital Business Card Template – Clent Ebanks-Templario
+# Tarjeta digital — Clent Ebanks
 
-Welcome to your modern and responsive **Digital Business Card Template**. This template is designed to help professionals stand out with a sleek, mobile-first web presence. Easily customize and host your digital card on platforms like Netlify or GitHub Pages.
+Tarjeta de presentación digital adaptada a la marca personal de Clent Ebanks.
 
-## 🔗 Live Demo
-👉 [View Live Demo](https://clentbusinesscard.netlify.app/)
+## Identidad
+
+- Posicionamiento: Tecnología clara para personas reales.
+- Mensaje: De militar a crear y enseñar tecnología.
+- Proyecto principal: WinHacks.
+- Segundo producto: Ebanks Interpreter Studio, en validación.
+- Empresa futura: Ebanks Labs.
 
 ## ✨ Features
 - Fully responsive design using Bootstrap 5

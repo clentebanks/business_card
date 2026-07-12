@@ -2,10 +2,11 @@ BEGIN:VCARD
 VERSION:3.0
 N:Ebanks;Clent;;;
 FN:Clent Ebanks
-ORG:WinHacks
-TITLE:Creador de contenido, Intérprete y Desarrollador Web
+ORG:Clent Ebanks | WinHacks
+TITLE:Intérprete bilingüe, fundador de WinHacks y desarrollador web en formación
 TEL;TYPE=CELL:+50498520210
 EMAIL;TYPE=INTERNET:clentebanks0@gmail.com
 URL:https://winhacks.dev/
-NOTE:Windows explicado de forma simple. WinHacks ayuda a usuarios, técnicos y creadores a descubrir funciones, comandos y configuraciones de Windows.
+URL;TYPE=LinkedIn:https://www.linkedin.com/in/clent-ebanks
+NOTE:Tecnología clara para personas reales. De militar a crear y enseñar tecnología. Fundador de WinHacks.
 END:VCARD
